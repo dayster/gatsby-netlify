@@ -1,0 +1,15 @@
+import React from 'react';
+import {Card, Button } from 'react-bootstrap';
+
+const Post = (props) => (
+    <Card>
+        <Card.Img variant="top" src={props.image} />
+        <Card.Body>
+            <Card.Title dangerouslySetInnerHTML={{__html: props.title}} />
+            <Card.Text dangerouslySetInnerHTML={{__html: props.excerpt}} />
+            <Button variant="primary" href={props.readMore}>Read More</Button>
+        </Card.Body>
+    </Card>
+)
+
+export default Post;
